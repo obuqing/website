@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Robotics researcher and engineer personal website." />
+  <title>Your Name | Robotics</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/style.css" />
+</head>
+<body>
+  <canvas id="robotics-bg" aria-hidden="true"></canvas>
+
+  <header class="site-header">
+    <a href="#home" class="brand">YN<span>.</span></a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-copy">
+        <div class="eyebrow">ROBOTICS · AUTONOMY · INTELLIGENT SYSTEMS</div>
+        <h1>Your Name</h1>
+        <h2>Robotics Researcher & Engineer</h2>
+        <p class="lead">
+          I build robotic systems that connect perception, planning, control,
+          and learning to operate reliably in the physical world.
+        </p>
+
+        <div class="hero-actions">
+          <a class="button primary" href="#projects">View Projects</a>
+          <a class="button secondary" href="assets/resume.pdf" target="_blank">View Resume</a>
+        </div>
+
+        <div class="status-row">
+          <div><span class="status-dot"></span> Open to research collaborations</div>
+          <div class="mono">Based in Your City</div>
+        </div>
+      </div>
+
+      <div class="robot-panel" aria-label="robot arm inspired illustration">
+        <div class="grid-label">SYSTEM STATUS // ONLINE</div>
+        <svg viewBox="0 0 520 420" role="img" aria-label="Minimal robotic arm illustration">
+          <defs>
+            <linearGradient id="armGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" stop-color="#78e7ff"/>
+              <stop offset="100%" stop-color="#7d7bff"/>
+            </linearGradient>
+            <filter id="glow">
+              <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+              <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+              </feMerge>
+            </filter>
+          </defs>
+
+          <g class="diagram-grid">
+            <path d="M40 60 H480 M40 120 H480 M40 180 H480 M40 240 H480 M40 300 H480 M40 360 H480"/>
+            <path d="M80 30 V390 M160 30 V390 M240 30 V390 M320 30 V390 M400 30 V390"/>
+          </g>
+
+          <g class="arm" filter="url(#glow)">
+            <rect x="88" y="316" width="118" height="34" rx="10"/>
+            <circle cx="150" cy="302" r="29"/>
+            <path d="M167 284 L244 205" class="arm-segment"/>
+            <circle cx="255" cy="195" r="26"/>
+            <path d="M273 181 L351 123" class="arm-segment"/>
+            <circle cx="364" cy="114" r="21"/>
+            <path d="M380 107 L428 91" class="arm-segment thin"/>
+            <path d="M427 75 L454 86 L431 102" class="gripper"/>
+          </g>
+
+          <g class="sensor">
+            <circle cx="385" cy="240" r="8"/>
+            <circle cx="385" cy="240" r="24"/>
+            <circle cx="385" cy="240" r="43"/>
+          </g>
+
+          <g class="labels">
+            <text x="52" y="44">WORLD FRAME</text>
+            <text x="330" y="286">PERCEPTION</text>
+            <text x="90" y="382">6-DOF MANIPULATOR</text>
+          </g>
+        </svg>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <div class="section-heading">
+        <span>01</span>
+        <h3>About</h3>
+      </div>
+
+      <div class="about-grid">
+        <div>
+          <p class="large-copy">
+            I am interested in intelligent robotic systems that can understand
+            their environment, make decisions, and interact with the world.
+          </p>
+          <p>
+            My work spans robotics, computer vision, machine learning, motion
+            planning, and control. I especially enjoy projects where software,
+            hardware, sensing, and experiments come together in one system.
+          </p>
+        </div>
+
+        <div class="skills-card">
+          <div class="skill-row"><span>Robotics</span><b>Manipulation / Mobile Systems</b></div>
+          <div class="skill-row"><span>Perception</span><b>Vision / 3D Sensing</b></div>
+          <div class="skill-row"><span>Planning</span><b>Motion / Task Planning</b></div>
+          <div class="skill-row"><span>Control</span><b>Feedback / Model-based</b></div>
+          <div class="skill-row"><span>Learning</span><b>Deep Learning / RL</b></div>
+          <div class="skill-row"><span>Tools</span><b>Python · C++ · ROS 2 · PyTorch</b></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-heading">
+        <span>02</span>
+        <h3>Selected Projects</h3>
+      </div>
+
+      <div class="project-grid">
+        <article class="project-card featured">
+          <div class="project-topline">
+            <span>01 / MANIPULATION</span>
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-visual visual-arm">
+            <div class="node n1"></div><div class="node n2"></div><div class="node n3"></div>
+            <div class="link l1"></div><div class="link l2"></div>
+          </div>
+          <h4>Vision-Guided Robotic Manipulation</h4>
+          <p>
+            Developed a perception-to-control pipeline for detecting objects,
+            estimating poses, planning grasp motions, and executing manipulation tasks.
+          </p>
+          <div class="tags"><span>ROS 2</span><span>PyTorch</span><span>MoveIt</span><span>RGB-D</span></div>
+          <a class="project-link" href="projects/project1.html">Project details →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline">
+            <span>02 / AUTONOMY</span>
+            <span class="project-year">2026</span>
+          </div>
+          <div class="project-visual visual-map">
+            <div class="map-path"></div>
+            <div class="map-point p1"></div><div class="map-point p2"></div><div class="map-point p3"></div>
+          </div>
+          <h4>Autonomous Navigation System</h4>
+          <p>
+            Integrated localization, mapping, obstacle perception, and planning
+            for autonomous navigation in indoor environments.
+          </p>
+          <div class="tags"><span>SLAM</span><span>LiDAR</span><span>ROS 2</span><span>C++</span></div>
+          <a class="project-link" href="projects/project2.html">Project details →</a>
+        </article>
+
+        <article class="project-card">
+          <div class="project-topline">
+            <span>03 / LEARNING</span>
+            <span class="project-year">2025</span>
+          </div>
+          <div class="project-visual visual-policy">
+            <div class="policy-line one"></div><div class="policy-line two"></div><div class="policy-line three"></div>
+            <div class="policy-agent"></div>
+          </div>
+          <h4>Learning-Based Robot Control</h4>
+          <p>
+            Explored data-driven control policies for dynamic robotic tasks with
+            simulation-to-real considerations and closed-loop evaluation.
+          </p>
+          <div class="tags"><span>RL</span><span>Simulation</span><span>Control</span><span>Python</span></div>
+          <a class="project-link" href="projects/project3.html">Project details →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="resume" class="section">
+      <div class="section-heading">
+        <span>03</span>
+        <h3>Resume</h3>
+      </div>
+
+      <div class="resume-layout">
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="time">2025 – Present</div>
+            <div>
+              <h4>Graduate Researcher</h4>
+              <p class="muted">University / Robotics Lab</p>
+              <p>Research on robotic perception, planning, learning, and intelligent physical systems.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">2023 – 2025</div>
+            <div>
+              <h4>M.S. in Robotics / Engineering</h4>
+              <p class="muted">University Name</p>
+              <p>Relevant areas: robotics, computer vision, machine learning, optimization, controls.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <div class="time">2019 – 2023</div>
+            <div>
+              <h4>B.S. in Mechanical / Electrical / Computer Engineering</h4>
+              <p class="muted">University Name</p>
+              <p>Coursework and projects in mechatronics, programming, dynamics, and embedded systems.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="resume-panel">
+          <div class="terminal-line">$ cat resume_summary.txt</div>
+          <p>
+            Robotics engineer with experience across perception, planning,
+            control, machine learning, and system integration.
+          </p>
+          <a class="button primary full" href="assets/resume.pdf" target="_blank">Open PDF Resume</a>
+          <p class="resume-note">
+            Replace <code>assets/resume.pdf</code> with the actual resume file.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div>
+        <div class="section-heading">
+          <span>04</span>
+          <h3>Contact</h3>
+        </div>
+        <p class="large-copy">
+          Interested in robotics, embodied intelligence, or collaborative research?
+          Feel free to reach out.
+        </p>
+      </div>
+
+      <div class="contact-card">
+        <a href="mailto:your.email@example.com">
+          <span>Email</span><strong>your.email@example.com</strong>
+        </a>
+        <a href="https://github.com/yourusername" target="_blank">
+          <span>GitHub</span><strong>github.com/yourusername</strong>
+        </a>
+        <a href="https://www.linkedin.com/in/yourusername/" target="_blank">
+          <span>LinkedIn</span><strong>linkedin.com/in/yourusername</strong>
+        </a>
+        <a href="#" target="_blank">
+          <span>Google Scholar</span><strong>Add profile link</strong>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>© <span id="year"></span> Your Name</span>
+    <span class="mono">Built for GitHub Pages · Robotics Portfolio v1.0</span>
+  </footer>
+
+  <script src="assets/script.js"></script>
+</body>
+</html>
